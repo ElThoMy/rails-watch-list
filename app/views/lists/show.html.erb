@@ -6,6 +6,6 @@
       <p><%= movie.overview %></p>
     </div>
   <% end %>
-  <%= link_to "Add a Movie", new_list_bookmark_path(@list)  %>
+  <%= link_to "Add a Movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
   <%= link_to "Back to my Lists", lists_path %>
 </div>
