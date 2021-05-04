@@ -4,6 +4,7 @@
     <div>
       <h2><%= movie.title %></h2>
       <p><%= movie.overview %></p>
+      <%= cl_image_tag @list.picture.key, height: 300, width: 250, crop: :fill % %>
     </div>
   <% end %>
   <%= link_to "Add a Movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>

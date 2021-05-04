@@ -13,6 +13,15 @@
   </head>
 
   <body>
+    <nav>
+      <div class="container nav-container">
+        <%= image_tag "cinema-icon.jpeg", alt: "cinema icon", class: "nav-icon"  %>
+        <div class="nav-links">
+          <%= link_to "My Lists", lists_path  %>
+          <%= link_to "Create List", new_list_path, class: "btn btn-dark" %>
+        </div>
+      </div>
+    </nav>
     <%= yield %>
   </body>
 </html>

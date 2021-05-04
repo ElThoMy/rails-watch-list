@@ -2,8 +2,8 @@
   <h1>These are my cool lists 🎬</h1>
   <ul>
     <% @lists.each do |list| %>
-      <li><%= link_to "#{list.name}", list_path(list) %></li>
+      <li><%= cl_image_tag list.picture.key, height: 50, width: 50, crop: :fill %><%= link_to "#{list.name}", list_path(list) %></li>
     <% end %>
   </ul>
-  <%= link_to "Create a list", new_list_path  %>
+  <%= link_to "Create a list", new_list_path, class: "btn btn-primary" %>
 </div>

@@ -10,6 +10,8 @@ require 'json'
 require 'open-uri'
 
 puts "Cleaning database"
+List.destroy_all
+Bookmark.destroy_all
 Movie.destroy_all
 puts "Done"
 
