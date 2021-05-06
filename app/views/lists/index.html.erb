@@ -1,5 +1,11 @@
+<div class="hero-banner">
+  <div class="container">
+    <h1>Welcome to the movie's lover favorite app 🍿🎥</h1>
+    <a class="btn btn-primary" href="#list-h2"> See the Lists</a>
+  </div>
+</div>
 <div class="container">
-  <h1>These are my cool lists 🎬</h1>
+  <h2 id="list-h2">These are my cool lists 🎬</h2>
   <ul>
     <% @lists.each do |list| %>
       <li><%= cl_image_tag list.picture.key, height: 50, width: 50, crop: :fill %><%= link_to "#{list.name}", list_path(list) %></li>

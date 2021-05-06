@@ -1,0 +1,15 @@
+.hero-banner {
+  height: 90vh;
+  width: 100%;
+  background: url('https://images.unsplash.com/photo-1542204165-65bf26472b9b');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.hero-banner .container {
+  text-align: center;
+  color: $white;
+  text-shadow: 0px 2px 5px rgba(0,0,0,0.5);
+}
