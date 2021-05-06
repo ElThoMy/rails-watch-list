@@ -8,5 +8,6 @@
     </div>
   <% end %>
   <%= link_to "Add a Movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
-  <%= link_to "Back to my Lists", lists_path %>
+  <%= link_to "Delete the List", list_path(@list), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-secondary" %>
+  <%= link_to "Back to my Lists", list_path(@list)%>
 </div>
