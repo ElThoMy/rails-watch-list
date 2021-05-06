@@ -6,10 +6,13 @@
 </div>
 <div class="container">
   <h2 id="list-h2">These are my cool lists 🎬</h2>
-  <ul>
+    <div class="flex">
     <% @lists.each do |list| %>
-      <li><%= cl_image_tag list.picture.key, height: 50, width: 50, crop: :fill %><%= link_to "#{list.name}", list_path(list) %></li>
+      <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path list.picture.key, crop: :fill %>')">
+        <%= link_to "#{list.name}", list_path(list) %>
+      </div>
     <% end %>
-  </ul>
+    </div>
+  </div>
   <%= link_to "Create a list", new_list_path, class: "btn btn-primary" %>
 </div>
