@@ -11,7 +11,6 @@ import "channels"
 // app/javascript/packs/application.js
 import 'bootstrap';
 
-
 Rails.start()
 Turbolinks.start()
 ActiveStorage.start()
