@@ -1,5 +1,5 @@
 class MoviesController < ApplicationController
-  before_action :find_movie, only: [:show, :create, :edit, :update, :destroy]
+  before_action :find_movie, only: [:show, :edit, :destroy]
 
   def index
     @movies = Movie.all
@@ -15,7 +15,7 @@ class MoviesController < ApplicationController
   def create
     @movie = Movie.new(review_params)
     @movie.save
-    redirect_to movies_path
+    redirect_to lists_path
   end
 
   def edit
